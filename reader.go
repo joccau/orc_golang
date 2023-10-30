@@ -328,6 +328,10 @@ func (r *Reader) getStripes() ([]*proto.StripeInformation, error) {
 	return nil, errNoFooter
 }
 
+func (r *Reader) GetStripes() ([]*proto.StripeInformation, error) {
+	return r.getStripes()
+}
+
 func (r *Reader) Close() error {
 	return nil
 }
